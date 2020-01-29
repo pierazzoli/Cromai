@@ -1,5 +1,5 @@
 #!bin/bash
-echo "Iniciando o Shell Script para monitoramento do processo phyton indicado no arquivo pid"
+echo "Iniciando o Script para monitoramento do processo phyton indicado no arquivo pid"
 
 while true
 	do
