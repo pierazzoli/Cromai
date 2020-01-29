@@ -1,0 +1,59 @@
+Python3: Informa PID e executa tarefas
+pega pid
+salva pid
+loop 3x
+	imprime msg
+imprime msgFinal
+finaliza
+
+
+Script Shell: Monitora o Script e reabre se fechar.
+Loop infinito
+	Lê arquivo
+	Verifica se o PID indicado está vivo
+	Reabre o script se fechar
+
+----------------------------------------------------------------------------------------------------------------------------------
+Diferença entre o pseudo código e o real
+
+Os dois seguiram basicamente o mesmo principio, mas ao usar o ps, a mensagem do ID aparece no terminal e a 
+partir do erro do comando como 0 para sucesso ou 1 ele executa a ação correspondente.
+
+Inicialmente pensei em salvar em variaveis os estados e comparar, mas o retorno do ps simplificou o procedimento.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Experiência nessa linha de programação em TIC
+
+Eu já realizei algo similar a mais de 10 anos atrás. Como tinha contrato de manutenção com 8 lan houses, 
+realizava as atualizações de programas, jogos, patchs, mods, traduções e mapas e até reparar instalações 
+por meio de scripts, além de muitas personalizações e refinamentos para melhorar o desempenho.
+
+Comecei com scripts .bat ou .cmd e depois aprendi a linguagem de scripts AutoIt sempre como autodidata. 
+Em Autoit fiz scripts simples e depois integrei tudo em um único programa. Nessa época que eu iniciei 
+uma graduação na concorrida Ciência da Computação na PUC Minas, mas não consegui dar sequência devido 
+os custos/carga de trabalho.
+
+Com o autoit eu dou o "Local $iPID = Run("calc.exe")" no programa salvando direto em uma variável iPID. 
+O loop aguarda a interação da tela ou outros programas que precisam executar junto enquanto alterna entre 
+um ou outro programa. Depois adicionei logs e planilhas em CSV para comparar as melhorias e testes, além 
+de evoluir os controles sobre a interface gráfica. 
+Posteriormente também alterava a prioridade de execução buscando reduzir mais o tempo necessário das manutenções.
+
+Alternativas nessa linha de pensamento: 
+Abre o script já informando o PID
+
+#!/bin/bash
+./script.py &
+echo $!
+
+
+Abre o script já salvando o PID
+
+#!/bin/bash
+./script.py &
+echo $! >>/tmp/script.pid
+
+
+
+
